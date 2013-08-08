@@ -1,0 +1,50 @@
+** The following scripts were created to assist with IPv6 only testing. ** 
+
+As an intern at Time Warner Cable, I was giving the task to perform tests to IPv6 only websites.  In particular websites that are part of the World IPv6 Launch community.
+Since it tests for IPv6-only websites, you must make sure that your end connection is IPv6 only to get the results you are looking for.  
+
+All scripts run in a Perl environment using the standard packages except for one package that must be installed individually. 
+
+**** MUST INSTALL HTML::TokeParser::Simple PACKAGE IN ORDER TO USE THE HTML TOKENIZER.
+
+Directorie:
+
+addressLookUp
+	- ipv6Address.pl run as ./ipv6address dn.txt     
+	- dn.txt : list of domain names
+
+downloadSpeed 
+	- downloadTimeIPv4.pl run as ./downloadTimeIPv4 dn.txt  
+	- downloadTimeIPv6.pl run as ./downloadTimeIPv6 dn.txt 
+	- dn.txt : list of domain names
+	- result.txt : output file
+
+websiteTesting
+->check-aref (directory that checks if all the links within the domain are reachable)
+	- checkLinks.pl run as ./checkLinks dn.txt
+	- dn.txt : list of domain names
+	- result.txt : output file
+	- log.txt : file with logging information
+	- temp.html : temporary file for html code
+->check-css (directory that checks if the CSS loads for each domain)
+	- checkCSS.pl run as ./checkCSS dn.txt
+	- dn.txt : list of domain names
+	- result.txt : output file
+	- log.txt : file with logging information
+	- temp.html : temporary file for html code
+->check-img (directory that checks if images and ads load)
+	- checkIMG.pl run as ./checkIMG dn.txt
+	- dn.txt : list of domain names
+	- result.txt : output file
+	- log.txt : file with logging information
+	- temp.html : temporary file for html code
+->check-site (directory that check if the IPv6 is reachable) 
+	- checkReachability.pl run as ./checkReachability dn.txt
+	- dn.txt : list of domain names
+	- result.txt : output file
+	- log.txt : file with logging information
+	- temp.html : temporary file for html code
+
+contact: moepro20@gmail.com
+
+
